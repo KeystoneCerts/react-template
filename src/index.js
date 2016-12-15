@@ -1,9 +1,15 @@
-import React from 'react';
+// import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import router from './router';
+
+// Custom bootstrap with larger fonts
 import './index.css';
+import './bootstrap/css/bootstrap.css';
+import './bootstrap/css/bootstrap-theme.css';
 
 ReactDOM.render(
-  <App />,
+  router,
   document.getElementById('root')
 );
+
+// <Provider store={store}>{router}</Provider>,
