@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Navbar, Nav, NavItem, NavDropdown, MenuItem, FormGroup, FormControl, Glyphicon } from 'react-bootstrap';
 import { IndexLink, Link } from 'react-router'
+import { LinkContainer } from 'react-router-bootstrap'
 import logo from '../logos/kci-blue-small.png';
 import './HeaderNav.css';
 
@@ -11,7 +12,7 @@ class HeaderNav extends Component {
           <Grid>
             <Navbar.Header>
               <Navbar.Brand>
-                <Link to="/page/home">
+                <Link to="/">
                   <img className="img-responsive" src={logo} alt="Keystone Certifications" />
                   <strong className="hidden-xs hidden-sm hidden-md hidden-lg">Keystone Certifications, Inc.</strong>
                 </Link>
@@ -20,7 +21,9 @@ class HeaderNav extends Component {
             </Navbar.Header>
             <Navbar.Collapse>
               <Nav>
-                <NavItem href="/next">Next</NavItem>
+                <LinkContainer to="/next">
+                  <NavItem>Next</NavItem>
+                </LinkContainer>
               </Nav>
             </Navbar.Collapse>
           </Grid>
